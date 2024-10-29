@@ -6,10 +6,13 @@ CXXFLAGS := -Wall -std=c++17
 SRC_DIR := ./src
 LIB_DIR := ./lib
 
+# Target name
+TARGET_NAME := spinw
+
 # Source files and output library
 SRC_FILES := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.cpp, $(LIB_DIR)/%.o, $(SRC_FILES))
-LIBRARY := $(LIB_DIR)/libmylibrary.a
+LIBRARY := $(LIB_DIR)/$(TARGET_NAME).a
 
 # Default target
 all: $(LIBRARY)
